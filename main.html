@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <title>ToDoIst</title>
+    <meta charset="utf-8" />
+    <style>
+      .header {
+        display: flex;
+        justify-content: space-between;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="one">
+        <form id="menu" action="main_menu.html" style="display: inline;">
+          <input type="submit" value="메뉴" />
+          <button id="home" class="upper_bar">home</button>
+          <input id="search" class="upper_bar" type="text" />
+        </form>
+      </div>
+      <div class="empty"></div>
+      <div class="two">
+        <button id="adding" class="upper_bar">일정추가</button>
+        <button id="productivity" class="upper_bar">생산성</button>
+      </div>
+      <div class="three">
+        <button id="alarm" class="upper_bar">알림</button>
+        <button id="setting" class="upper_bar">설정</button>
+      </div>
+    </div>
+    <br /><br /><br /><br /><br />
+    <div id="main">
+      <div id="main_date">
+        <span>오늘&emsp;</span
+        ><span id="date"
+          ><script>
+            n = new Date();
+            y = n.getFullYear();
+            m = n.getMonth() + 1;
+            d = n.getDate();
+            document.getElementById("date").innerHTML = y + "/" + m + "/" + d;
+          </script></span
+        >
+      </div>
+      <br /><br /><br />
+      <div id="main_old_process">지난 작업</div>
+      <br />
+      <table>
+        <tr>
+          <td>
+            <span><input type="checkbox" />&nbsp;</span
+            ><span>어제는 마라탕을 먹었습니다</span>
+          </td>
+        </tr>
+      </table>
+      <br /><br />
+      <div id="main_today_process">오늘 작업</div>
+      <br />
+      <table>
+        <tr>
+          <td>
+            <span><input type="checkbox" />&nbsp;</span
+            ><span><input type="text" /></span>
+          </td>
+        </tr>
+      </table>
+      <br /><br />
+    </div>
+  </body>
+</html>
