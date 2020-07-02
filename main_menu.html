@@ -1,0 +1,116 @@
+<html>
+  <head>
+    <title>ToDoIst</title>
+    <meta charset="utf-8" />
+    <style>
+      body {
+        margin: 0;
+      }
+      .header {
+        display: flex;
+        justify-content: space-between;
+        background-color: red;
+        padding: 8px;
+        margin: 0;
+      }
+      .main {
+        padding: 20px;
+        margin: 0;
+      }
+      #main_with_menu {
+        display: grid;
+        grid-template-columns: 270px 1fr;
+      }
+      .menu {
+        width: 250px;
+        margin: 0;
+        border-right: 1px solid gray;
+        background-color: gray;
+        padding-left: 20px;
+        padding-top: 20px;
+      }
+      #menu_1,
+      #menu_2,
+      #menu_3,
+      #menu_4 {
+        display: block;
+        margin: 5px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="one">
+        <form action="main_menu.html" style="display: inline;">
+          <input type="submit" value="메뉴" />
+        </form>
+        <form action="main.html" style="display: inline;">
+          <input type="submit" value="home" />
+        </form>
+        <input type="text" />
+      </div>
+      <div class="two">
+        <button>일정추가</button>
+        <button>생산성</button>
+        <button>알림</button>
+        <button>설정</button>
+      </div>
+    </div>
+    <div id="main_with_menu">
+      <div class="menu">
+        <button id="menu_1">관리함</button>
+        <button id="menu_2">오늘</button>
+        <button id="menu_3">다음</button><br />
+        <h4 id="menu_4">환영합니다! 😀</h4>
+        <br />
+      </div>
+      <div class="main">
+        <div class="text"></div>
+        <div id="main_date">
+          <span>오늘&emsp;</span
+          ><span id="date">
+            <script>
+              n = new Date();
+              y = n.getFullYear();
+              m = n.getMonth() + 1;
+              d = n.getDate();
+              document.getElementById("date").innerHTML = y + "/" + m + "/" + d;
+            </script></span
+          >
+        </div>
+        <br /><br /><br />
+        <div id="main_old_process">지난 작업</div>
+        <br />
+        <table>
+          <tr>
+            <td>
+              <span><input type="checkbox" />&nbsp;</span
+              ><span>어제는 마라탕을 먹었습니다</span>
+            </td>
+          </tr>
+        </table>
+        <br /><br />
+        <div id="main_today_process">오늘 작업</div>
+        <br />
+        <table>
+          <tr>
+            <td>
+              <span><input type="checkbox" />&nbsp;</span
+              ><span><input type="text" /></span>
+              <button class="btn">안녕!</button>
+            </td>
+          </tr>
+        </table>
+        <br /><br />
+      </div>
+    </div>
+    <script>
+      console.log(document.querySelector(".btn"));
+
+      document.querySelector(".btn").addEventListener("click", () => {
+        document.querySelector(".text").append("안녕!");
+      });
+    </script>
+  </body>
+</html>

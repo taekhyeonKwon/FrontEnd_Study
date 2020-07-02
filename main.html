@@ -3,33 +3,39 @@
     <title>ToDoIst</title>
     <meta charset="utf-8" />
     <style>
+      body {
+        margin: 0;
+      }
       .header {
         display: flex;
         justify-content: space-between;
+        background-color: red;
+        padding: 8px;
+        margin: 0;
+      }
+      .main {
+        padding: 20px;
+        margin: 0;
       }
     </style>
   </head>
   <body>
     <div class="header">
       <div class="one">
-        <form id="menu" action="main_menu.html" style="display: inline;">
+        <form action="main_menu.html" style="display: inline;">
           <input type="submit" value="메뉴" />
-          <button id="home" class="upper_bar">home</button>
-          <input id="search" class="upper_bar" type="text" />
         </form>
+        <button>home</button>
+        <input type="text" />
       </div>
-      <div class="empty"></div>
       <div class="two">
-        <button id="adding" class="upper_bar">일정추가</button>
-        <button id="productivity" class="upper_bar">생산성</button>
-      </div>
-      <div class="three">
-        <button id="alarm" class="upper_bar">알림</button>
-        <button id="setting" class="upper_bar">설정</button>
+        <button>일정추가</button>
+        <button>생산성</button>
+        <button>알림</button>
+        <button>설정</button>
       </div>
     </div>
-    <br /><br /><br /><br /><br />
-    <div id="main">
+    <div class="main">
       <div id="main_date">
         <span>오늘&emsp;</span
         ><span id="date"
